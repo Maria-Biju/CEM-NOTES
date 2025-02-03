@@ -6,86 +6,101 @@
     <title>CEM NOTES</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            position:relative;
+            width:100%;
+            height:97vh;
+            animation: animate 16s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%, 100% {
+                background-image: url('img1.jpg');
+            }
+            25% {
+                background-image: url('img2.jpg');
+            }
+            50% {
+                background-image: url('img3.jpg');
+            }
+            75% {
+                background-image: url('img4.jpg');
+            }
+        }
+    </style>
 </head>
 <body>
-        
-     <div class="container" id="signup" style="display: none;">
-        <h1 class="form-title">Register</h1>
-        <form method="post" action="">
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" name="fname" id="fname" placeholder="First name" required>
-                <label for="fname">First Name</label>
-            </div>
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" name="lname" id="lname"placeholder="Last name" required>
-                <label for="lname">Last Name</label>
-            </div>
-            <div class="input-group">
-                <i class="fas fa-envelope"></i>
-                <input type="text" name="email" id="email"placeholder="email" required>
-                <label for="email">Email</label>
-            </div>
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password"placeholder="password" required>
-                <label for="password">Password</label>
-                <i class="fas-fa-eye" id="togglepassword" onclick="togglepassword()"></i>
-                <button type="password" onclick="togglepassword">show/hide</button>
-            </div>
-                   
-                
-           
-            <input type="Submit" class="btn" value="sign up" name="SignUp"
-        </form>
-        <p class="or">-----------or------------</p>
-
-        <div class="icons">
-
-            <i class="fas fa-google"></i>
-            <i class="fas fa-facebook"></i>
+        <div class="header">
+            <div class="text">CEM-NOTES</div>
         </div>
-        <div class="links">
-            <p>Already Have Account?</p>
-            <button id="signInButton">Sign in</button>
-        </div>
-     </div>
-     <div class="container" id="signin">
-        <h1 class="form-title">Sign in</h1>
-        <form method="post" action="">
-            
-            <div class="input-group">
-                <i class="fas fa-envelope"></i>
-                <input type="text" name="email" id="email"placeholder="email" required>
-                <label for="email">Email</label>
+
+        <div class="container" id="signup" style="display: none;">
+            <h1 class="form-title">Register</h1>
+            <form method="post" action="">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="fname" id="fname" placeholder="First name" required>
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="lname" id="lname" placeholder="Last name" required>
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="email" id="email" placeholder="Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                    <i class="fas fa-eye" id="togglepassword" onclick="togglepassword()"></i>
+                </div>
+                <input type="submit" class="btn" value="Sign up" name="SignUp">
+            </form>
+            <p class="or">-----------or------------</p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
             </div>
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="text" name="password" id="password"placeholder="password" required>
-                <label for="password">Password</label>
+            <div class="links">
+                <p>Already Have Account?</p>
+                <button id="signInButton">Sign in</button>
             </div>
-            <p class="recover">
-                <a href="#">Recover Password</a>
-
-            </p>
-            <input type="Submit" class="btn" value="sign in" name="SignIp"
-        </form>
-        <p class="or">
-            -------------or--------------
-        </p>
-
-        <div class="icons">
-
-            <i class="fas fa-google"></i>
-            <i class="fas fa-facebook"></i>
         </div>
-        <div class="links">
-            <p>Don't Have Account Yet?</p>
-            <button id="signUpButton">Sign up</button>
+
+        <div class="container" id="signin">
+            <h1 class="form-title">Sign in</h1>
+            <form method="post" action="">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="email" id="email" placeholder="Email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                    <i class="fas fa-eye" id="togglepassword" onclick="togglepassword()"></i>
+                </div>
+                <p class="recover">
+                    <a href="#">Recover Password</a>
+                </p>
+                <input type="submit" class="btn" value="Sign in" name="SignIn">
+            </form>
+            <p class="or">-------------or--------------</p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Don't Have Account Yet?</p>
+                <button id="signUpButton">Sign up</button>
+            </div>
         </div>
-    
-     </div>
+
     <script src="script.js"></script>    
 </body>
 </html>
